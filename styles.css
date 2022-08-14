@@ -1,0 +1,43 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#border {
+    display: flex;
+    width: 636px;
+    height: 636px;
+    margin-top: 30px;
+    background-image: url("etchASketch.png");
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6%;
+
+}
+
+#grid-container {
+    position: absolute;
+    display: grid;
+    /*margin-left: 76px;*/
+    width: 480px;
+    height: 480px;
+    grid-gap: 0px;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    border: 3px solid black;
+}
+
+.gridSquare {
+    display: flex;
+    border: hidden;
+    aspect-ratio: 1;
+    font-size: 8px;
+    justify-content: center;
+    align-content: center;
+}
+
+.gridSquare:hover {
+    background-color: black;
+    transition: 20ms;
+}

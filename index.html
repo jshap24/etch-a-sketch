@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-	<script src="index.js"></script>
+<body>
+    <h1>Etch-A-Sketch</h1>
+    <h2>Hover over the grid to create your design</h2>
+    <input type="button" onclick="makeGrid(24)" value="Start Drawing">
+    <div id="border">
+        <div id="grid-container"></div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
