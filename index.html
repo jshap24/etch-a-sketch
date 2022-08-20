@@ -10,8 +10,15 @@
 <body>
     <h1>Etch-A-Sketch</h1>
     <h2>Hover over the grid to create your design</h2>
-    <input type="button" onclick="makeGrid(24)" value="Start Drawing">
-    <div id="border">
+      <div id="menu">
+        <label for="sizeChoice">Choose Your Grid Size</label>
+        <input type="range" id="sizeChoice" min="4" max="100">
+        <p><span id="sliderValue"></span> Grid</p>
+        <div id="lowerMenu">
+          <button type="button" id="reset" onclick="reset()">Clear All</button>
+        </div>
+      </div>
+    <div id="sketchBox">
         <div id="grid-container"></div>
     </div>
     <script src="index.js"></script>
