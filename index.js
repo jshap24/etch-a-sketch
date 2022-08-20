@@ -12,9 +12,11 @@ slider.onchange = function() {
 slider.addEventListener('change', () => {
     removeAllChildNodes(gridContainer);
     makeGrid(slider.value);
+    gridContainer.style.setProperty(`grid-template-columns`, `repeat(${slider.value}, 1fr)`)
+    gridContainer.style.setProperty(`grid-template-rows`, `repeat(${slider.value}, 1fr)`)
   });
 
-makeGrid(gridSize);
+makeGrid(24);
 
 function makeGrid(v) {
     //let gridContainer = document.getElementById("grid-container");
@@ -32,14 +34,13 @@ function makeGrid(v) {
         }
         gridContainer.appendChild(myRow);
         }
-   gridContainer.style.setProperty(`grid-template-columns`, `repeat(${slider.value}, 1fr)`)
-   gridContainer.style.setProperty(`grid-template-rows`, `repeat(${slider.value}, 1fr)`)
+        
     } 
 
-function changeGridSize() {
+/*function changeGridSize() {
     document.gridContainer.style.setProperty(`--grid-template-columns`, `repeat(${slider.value}, 1fr)`)
     document.gridContainer.style.setProperty(`--grid-template-rows`, `repeat(${slider.value}, 1fr)`)
-}
+}*/
 
 //Making functionality for the reset button
 function removeAllChildNodes(parent) {
